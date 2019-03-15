@@ -10,7 +10,7 @@ import entrada_dados as ed
 from sklearn.model_selection import train_test_split 
 # Métricas
 from sklearn.metrics import confusion_matrix, accuracy_score
-# Classificador Random Forest
+# Biblioteca com o Classificador Random Forest
 from sklearn.ensemble import RandomForestClassifier
 
 
@@ -41,8 +41,9 @@ previsores, classe = le_dados()
 """
     Divisão da base em treino e teste
 """
-X_treinamento, X_teste, y_treinamento, y_teste = train_test_split(previsores, classe,
-                                                                  test_size=0.3, random_state=0
+X_treinamento, X_teste, y_treinamento, y_teste = train_test_split(previsores,classe,
+                                                                  test_size=0.3,
+                                                                  random_state=0
                                                                   )
 """
     Cria floresta com 100 árvores para fazer a votação e com base nisto, classificar
